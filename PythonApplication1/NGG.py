@@ -3,14 +3,14 @@ num = random.randint(0,10)
 score = 0
 
 def menu():
-	psq = input('1. Play     2. Shop     3. Quit', end='')
+	psq = input('1. Play     2. Shop     3. Quit    <:')
 
 	if psq == '1':
 		return game()
 	elif psq == '2':
 		return shop()
 	elif psq == '3':
-		return gameOver
+		return gameOver()
 
 def shop():
 	print('Balance:', score)
@@ -36,7 +36,7 @@ def playAgain():
 		return game()
 	elif retry == 'n':
 		return menu()
-	else : 
+	else: 
 		return playAgain()
 
 
@@ -71,5 +71,4 @@ def easterEgg():
 	score = score + 20000
 	print('Your score is, ', score)
 	return playAgain()
-
 menu()
